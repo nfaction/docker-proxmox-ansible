@@ -1,5 +1,7 @@
 # docker-proxmox7-ansible
 
+[![Build](https://github.com/nfaction/docker-proxmox7-ansible/actions/workflows/build.yml/badge.svg)](https://github.com/nfaction/docker-proxmox7-ansible/actions/workflows/build.yml)
+
 ## Build image manually
 
 Build a container and push it to Docker Hub:
