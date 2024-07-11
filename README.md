@@ -8,7 +8,7 @@ Build a container and push it to Docker Hub:
 
 ```
 docker login
-docker build -f Dockerfile -t spikebyte/docker-proxmox7-ansible:latest .
+docker build -f Dockerfile-PVE7 -t spikebyte/docker-proxmox7-ansible:latest .
 docker push spikebyte/docker-proxmox7-ansible:latest
 ```
 
