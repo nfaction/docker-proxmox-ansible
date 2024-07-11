@@ -38,6 +38,8 @@ RUN apt-get update && apt-get install wget -y && \
 # OPTIONAL: Simulate Enterprise repositories
 RUN echo -e 'deb https://enterprise.proxmox.com/debian/pve bookworm pve-enterprise' > /etc/apt/sources.list.d/pve-enterprise.list
 
+RUN mkdir -p /tmp/.ansible/tmp
+
 # Disable full emulation of proxmox, just need to test automation
 # Install Proxmox VE
 # RUN apt-get update && apt-get full-upgrade -y
