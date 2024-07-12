@@ -153,7 +153,7 @@ jobs:
           file: Dockerfile-PVE8
           push: ${{ github.event_name != 'pull_request' }}
           tags: |
-            $${{ steps.meta.outputs.tags }}
+            ${{ steps.meta.outputs.tags }}
             ${{ env.PVE8_IMAGE_NAME }}:latest
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
