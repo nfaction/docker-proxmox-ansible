@@ -29,6 +29,7 @@ docker run -it --rm -v $(pwd):/opt/ spikebyte/docker-proxmox8-ansible:latest bas
 * https://pve.proxmox.com/pve-docs/chapter-sysadmin.html#sysadmin_package_repositories
 * https://pve.proxmox.com/pve-docs/chapter-pve-installation.html
 * https://github.com/geerlingguy/docker-debian12-ansible/blob/master/Dockerfile
+* https://github.com/geerlingguy/ansible-role-php/blob/51684c4c27a76efa134922cdadae2e6f76bb589b/molecule/default/molecule.yml
 
 ## Proxmox VE Enterprise
 
