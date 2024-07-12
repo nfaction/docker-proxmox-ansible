@@ -28,6 +28,7 @@ docker run -it --rm -v $(pwd):/opt/ spikebyte/docker-proxmox8-ansible:latest bas
 * https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_Buster
 * https://pve.proxmox.com/pve-docs/chapter-sysadmin.html#sysadmin_package_repositories
 * https://pve.proxmox.com/pve-docs/chapter-pve-installation.html
+* https://github.com/geerlingguy/docker-debian12-ansible/blob/master/Dockerfile
 
 ## Proxmox VE Enterprise
 
