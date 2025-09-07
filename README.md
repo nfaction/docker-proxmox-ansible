@@ -13,6 +13,9 @@ docker push spikebyte/docker-proxmox7-ansible:latest
 
 docker build -f Dockerfile-PVE8 -t spikebyte/docker-proxmox8-ansible:latest .
 docker push spikebyte/docker-proxmox8-ansible:latest
+
+docker build -f Dockerfile-PVE9 -t spikebyte/docker-proxmox9-ansible:latest .
+docker push spikebyte/docker-proxmox9-ansible:latest
 ```
 
 Test container:
@@ -21,6 +24,8 @@ Test container:
 docker run -it --rm -v $(pwd):/opt/ spikebyte/docker-proxmox7-ansible:latest bash
 
 docker run -it --rm -v $(pwd):/opt/ spikebyte/docker-proxmox8-ansible:latest bash
+
+docker run -it --rm -v $(pwd):/opt/ spikebyte/docker-proxmox9-ansible:latest bash
 ```
 
 ## References
