@@ -35,11 +35,17 @@ RUN rm -f /lib/systemd/system/multi-user.target.wants/getty.target
 # Configure Proxmox VE Repositories
 RUN apt-get update && apt-get install wget -y && \
     echo "deb [arch=amd64] http://download.proxmox.com/debian/pve trixie pve-no-subscription" > /etc/apt/sources.list.d/pve-install-repo.list && \
-    wget https://enterprise.proxmox.com/debian/proxmox-release-trixie.gpg -O /etc/apt/trusted.gpg.d/proxmox-release-trixie.gpg && \
-    chmod +r /etc/apt/trusted.gpg.d/proxmox-release-trixie.gpg
+    wget https://enterprise.proxmox.com/debian/proxmox-release-trixie.gpg -O /usr/share/keyrings/proxmox-archive-keyring.gpg && \
+    chmod +r /usr/share/keyrings/proxmox-archive-keyring.gpg
 
 # OPTIONAL: Simulate Enterprise repositories
-RUN echo 'deb https://enterprise.proxmox.com/debian/pve trixie pve-enterprise' > /etc/apt/sources.list.d/pve-enterprise.list
+RUN cat > /etc/apt/sources.list.d/pve-enterprise.sources << 'EOF'
+Types: deb
+URIs: https://enterprise.proxmox.com/debian/pve
+Suites: trixie
+Components: pve-enterprise
+Signed-By: /usr/share/keyrings/proxmox-archive-keyring.gpg
+EOF
 
 # Disable full emulation of proxmox, just need to test automation
 # Install Proxmox VE
